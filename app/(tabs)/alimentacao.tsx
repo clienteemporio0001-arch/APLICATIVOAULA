@@ -30,7 +30,7 @@ export default function Food() {
     <Pill text="DIÁRIO DEMONSTRATIVO" icon="flask-outline" />
     <View style={{ height: 12 }} /><Heading title="Alimentação" subtitle="Acompanhe suas escolhas sem complicar." />
     <Card style={s.hero}><View style={{ flexDirection: 'row', justifyContent: 'space-between' }}><View><AppText size={12} muted>CONSUMIDAS NO DIA</AppText><AppText size={32} bold style={{ marginTop: 3 }}>{kcal(eaten)} <AppText muted size={15}>kcal</AppText></AppText></View><View style={s.heroIcon}><Icon name="nutrition-outline" color={C.primary} size={28} /></View></View>
-      <View style={s.track}><View style={[s.fill, { width: Math.min(100, eaten / Math.max(1,profile.calorieGoal) * 100) + '%' }]} /></View><AppText muted size={12}>{kcal(profile.calorieGoal)} kcal: meta ilustrativa da demonstração</AppText>
+      <View style={s.track}><View style={[s.fill, { width: `${Math.min(100, (eaten / Math.max(1, profile.calorieGoal)) * 100)}%` as `${number}%` }]} /></View><AppText muted size={12}>{kcal(profile.calorieGoal)} kcal: meta ilustrativa da demonstração</AppText>
     </Card>
     <View style={s.dateRow}><TouchableOpacity onPress={() => setDay(localDay())} style={[s.dateButton, day===localDay() && s.dateActive]}><AppText bold size={13} style={{ color: day===localDay()? C.white : C.ink }}>Hoje</AppText></TouchableOpacity><TouchableOpacity onPress={() => { const d = new Date(); d.setDate(d.getDate()-1); setDay(localDay(d)); }} style={[s.dateButton, day!==localDay() && s.dateActive]}><AppText bold size={13} style={{ color: day!==localDay()? C.white : C.ink }}>Ontem</AppText></TouchableOpacity><AppText muted size={12}>{formatDay(day)}</AppText></View>
     {adding ? <Card>
