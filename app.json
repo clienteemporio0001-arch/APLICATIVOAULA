@@ -1,0 +1,42 @@
+{
+  "expo": {
+    "name": "Leve+",
+    "slug": "leve-mais",
+    "scheme": "levemais",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "backgroundColor": "#F6F8F5",
+    "android": {
+      "package": "br.com.levemais.demo",
+      "adaptiveIcon": {
+        "backgroundColor": "#0E775E"
+      }
+    },
+    "ios": {
+      "bundleIdentifier": "br.com.levemais.demo",
+      "supportsTablet": true
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "name": "Leve+"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "O Leve+ acessa apenas as imagens que você escolher para a demonstração. Nenhuma imagem é enviada a servidores.",
+          "cameraPermission": "O Leve+ usa a câmera somente quando você pedir para criar uma fotografia.",
+          "microphonePermission": false
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "baseUrl": "/APLICATIVOAULA"
+    }
+  }
+}

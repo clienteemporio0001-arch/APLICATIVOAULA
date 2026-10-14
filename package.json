@@ -1,0 +1,33 @@
+{
+  "name": "leve-mais",
+  "version": "0.1.0",
+  "private": true,
+  "main": "expo-router/entry",
+  "scripts": {
+    "start": "expo start",
+    "web": "expo start --web",
+    "typecheck": "tsc --noEmit",
+    "web:export": "expo export --platform web",
+    "validate": "npm run typecheck && npm run web:export"
+  },
+  "dependencies": {
+    "@expo/vector-icons": "^15.0.0",
+    "expo": "~57.0.21",
+    "expo-router": "~57.0.21",
+    "expo-status-bar": "~57.0.1",
+    "expo-linking": "~57.0.11",
+    "expo-constants": "~57.0.15",
+    "expo-image-picker": "~57.0.17",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "react-native": "0.86.3",
+    "react-native-web": "^0.21.0",
+    "react-native-safe-area-context": "^5.6.2",
+    "react-native-screens": "^4.19.0",
+    "react-native-svg": "15.15.4"
+  },
+  "devDependencies": {
+    "@types/react": "~19.2.0",
+    "typescript": "~5.9.2"
+  }
+}
