@@ -52,7 +52,7 @@ export default function Evolution() {
         <View><AppText muted size={11}>META</AppText><AppText bold size={18}>{asKg(profile.goalWeight)} kg</AppText></View>
         <View><AppText muted size={11}>VARIAÇÃO</AppText><AppText bold size={18}>{(current-initial)>0?'+':''}{asKg(current-initial)} kg</AppText></View>
       </View>
-      <View style={s.progressLine}><View style={[s.progressValue, { width: (progress * 100) + '%' }]} /></View>
+      <View style={s.progressLine}><View style={[s.progressValue, { width: `${progress * 100}%` as `${number}%` }]} /></View>
       <AppText muted size={12}>{Math.round(progress*100)}% do caminho entre o início e a meta, conforme seus registros ilustrativos.</AppText>
     </Card>
     <Section title="Histórico de peso" />
