@@ -14,9 +14,9 @@ export default function TabLayout() {
     tabBarStyle: { backgroundColor: C.white, borderTopColor: C.line, height: 66, paddingBottom: 9, paddingTop: 7 },
     sceneStyle: { backgroundColor: C.bg },
   }}>
-    <Tabs.Screen name="index" options={{ title: 'Hoje', tabBarIcon: ({ color, size, focused }) => icon(focused ? 'home' : 'home-outline', color, size) }} />
-    <Tabs.Screen name="alimentacao" options={{ title: 'Alimentação', tabBarIcon: ({ color, size, focused }) => icon(focused ? 'restaurant' : 'restaurant-outline', color, size) }} />
-    <Tabs.Screen name="evolucao" options={{ title: 'Evolução', tabBarIcon: ({ color, size, focused }) => icon(focused ? 'stats-chart' : 'stats-chart-outline', color, size) }} />
-    <Tabs.Screen name="perfil" options={{ title: 'Perfil', tabBarIcon: ({ color, size, focused }) => icon(focused ? 'person' : 'person-outline', color, size) }} />
+    <Tabs.Screen name="index" options={{ title: 'Hoje', tabBarIcon: ({ color, size, focused }) => icon(focused ? 'home' : 'home-outline', String(color), size) }} />
+    <Tabs.Screen name="alimentacao" options={{ title: 'Alimentação', tabBarIcon: ({ color, size, focused }) => icon(focused ? 'restaurant' : 'restaurant-outline', String(color), size) }} />
+    <Tabs.Screen name="evolucao" options={{ title: 'Evolução', tabBarIcon: ({ color, size, focused }) => icon(focused ? 'stats-chart' : 'stats-chart-outline', String(color), size) }} />
+    <Tabs.Screen name="perfil" options={{ title: 'Perfil', tabBarIcon: ({ color, size, focused }) => icon(focused ? 'person' : 'person-outline', String(color), size) }} />
   </Tabs>;
 }
