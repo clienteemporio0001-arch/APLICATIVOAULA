@@ -72,7 +72,7 @@ export default function Onboarding() {
   };
   return <SafeAreaView style={s.root}><ScrollView keyboardShouldPersistTaps="handled" contentContainerStyle={s.shell}>
     <View style={s.top}><TouchableOpacity onPress={() => step ? setStep(step-1) : router.back()} style={s.back}><Icon name="arrow-back" color={C.ink} /></TouchableOpacity><Pill text="MODO DEMONSTRAÇÃO" icon="flask-outline" /></View>
-    <View style={s.progress}><View style={[s.progressFill, { width: ((step+1)/8 * 100) + '%' }]} /></View>
+    <View style={s.progress}><View style={[s.progressFill, { width: `${((step + 1) / 8) * 100}%` as `${number}%` }]} /></View>
     <AppText muted size={13} style={{ marginTop: 12 }}>PASSO {step+1} DE 8</AppText>
     <View style={{ marginTop: 40, flex: 1 }}>
       <View style={s.emblem}><Icon name="leaf-outline" color={C.primary} size={29} /></View>
